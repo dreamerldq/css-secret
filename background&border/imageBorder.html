@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>连续的图像边框</title>
+    <style>
+        body{
+            background: rgb(219, 219, 219);
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            border: 1em solid transparent;
+	        background: linear-gradient(white, white),
+	            url(http://csssecrets.io/images/stone-art.jpg);
+                background-size: cover;
+                background-clip: padding-box, border-box;
+                background-origin: border-box;
+            /* 原因是 background-origin 的 默认值是padding-box，因此，图片的显示尺寸不仅取决于padding box的 尺寸，而且被放置在了padding box的原点(左上角)。我们看到的实际上
+             就是背景图片以平铺的方式蔓延到border box区域的效果。为了修正这个问 题，只需把 background-origin 也设置为 border-box 就可以了 */
+
+        /* 实现思路就是制定两个背景色，一个纯色一个图片 */
+	
+        }
+        .container1{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 600px;
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        repeating-linear-gradient(-45deg,
+                        red 0, red 12.5%,
+                        transparent 0, transparent 25%,
+                        #58a 0, #58a 37.5%,
+                        transparent 0, transparent 50%)
+            0 / 5em 5em;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container1"></div>
+</body>
+</html>

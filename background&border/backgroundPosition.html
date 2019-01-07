@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>灵活的背景定位</title>
+    <style>
+        body{
+            background: rgb(219, 219, 219);
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            background: url(http://csssecrets.io/images/code-pirate.svg)
+	            no-repeat #58a;
+	        background-position: right 10px bottom 10px;
+            padding: 10px;
+
+            /* background-position可以指定距离任意角的偏移量 */
+            /* 默认情况下background-position是以padding box为准，因此top left 默认指的是padding box 的左上角,
+            通过background-origin 将padding-box改成content-box就可以让图片的偏移以内容区为基准 */
+        }
+        .container1{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 600px;
+            background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	        background-position: right 10px bottom 10px;
+            background-origin: content-box;
+            padding: 10px;
+        
+            /* background-position可以指定距离任意角的偏移量 */
+            /* 默认情况下background-position是以padding box为准，因此top left 默认指的是padding box 的左上角,
+            通过background-origin 将padding-box改成content-box就可以让图片的偏移以内容区为基准 */
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container1"></div>
+</body>
+</html>

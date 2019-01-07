@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景条纹</title>
+    <style>
+        body{
+            background: rgb(219, 219, 219);
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            background: linear-gradient(#fb3 30%, #58a 0);
+            background-size: 100% 30px;
+            /* 颜色后边紧跟着的值是色标，50% 意味着上边50%都是指定的颜色值，所以只要设置两个50%就能够实现两段条纹。 */
+            /* 渐变其实就是代码生成的图片，所以可以通过background-size来调整尺寸。 */
+            /* #fb3 20%, #58a 80%  上面20%和下面20%为实色， 所以只有中间的60%为渐变区域  */
+            /* #fb3 30%, #58a 30%  上面30%和下面70%为实色， 所以只有中间的0%为渐变区域  */
+
+            /* “如果某个色标的位置值比整个列表中在它之前的色标的位置值都要 小，则该色标的位置值会被设置为它前面所有色标位置值的最大值。” */
+            /* 这意味着，如果我们把第二个色标的位置值设置为 0，那它的位置就 总是会被浏览器调整为前一个色标的位置值 */
+            /* linear-gradient(#fb3 30%, #58a 0); 和 linear-gradient(#fb3 30%, #58a 30%); 是同样的效果 */
+
+        }
+        .container1{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 600px;
+            background: linear-gradient( to right, #fb3 33.3%,
+            #58a 0, #58a 66.6%, yellowgreen 0);
+            background-size: 30px 100%;
+        }
+        .container2{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 900px;
+            background: linear-gradient(45deg,
+            #fb3 25%, #58a 0, #58a 50%,
+            #fb3 0, #fb3 75%, #58a 0);
+             background-size: 30px 30px;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container1"></div>
+    <div class="container2"></div>
+</body>
+</html>

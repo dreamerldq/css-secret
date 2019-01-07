@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>透明边框</title>
+    <style>
+        body{
+            background: rgb(219, 219, 219);
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            background: #ffffff;
+            border: 10px solid hsla(0, 100%, 50%, .5);
+            background-clip: content-box; 
+            /* 默认情况下背景会延展到边框下，需要通过backgroun-clip 调整背景范围  */
+        }
+    </style>
+    <script>
+
+        //hsla
+        // Hue 色调 0-360    0：红色  120：绿色 240：蓝色
+        // Saturation 饱和度 0.0% - 100.0%
+        // Lightness 亮度  0.0% - 100.0%
+        // Alpha透明度  取值0~1之间
+    </script>
+</head>
+<body>
+    <div class="container">  
+       
+    </div>
+</body>
+</html>
