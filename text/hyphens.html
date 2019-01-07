@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" lang="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>透明边框</title>
+    <style>
+        .container p{
+            width: 200px;
+            hyphens: auto;
+            display: block;
+            text-align: justify;
+            
+            /* 使用 text-align: justify 虽然实现了两端对齐但是却行了了”单词孤岛“的现象 */
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container">
+     <p>
+        仅此一行足矣。你可以在图 5-2 中看到它的效果。当然，为了确保它奏 效，你需要在 HTML 标签的 lang 属性中指定合适的语言。其实不管怎样， 这本来就是你早该做好的份内之事。
+        如果需要更细粒度地控制连字符的行为(比如在简短的引文中)，你仍 然可以通过一些软连字符(&shy;)来辅助浏览器进行断词。这个 hyphens 属性会优先处理它们，然后再去计算其他可以断词的地方。
+        CSS 连字符可以非常平稳地退化。如果 hyphens 属性不被支持，得到 的文本对齐效果就是图 5-1 的程度。这个效果确实算不上好看，也算不上特 别易读，但它的可访问性还是完美可靠的。
+            </div>
+     </p>
+</body>
+</html>

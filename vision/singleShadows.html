@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>染色效果</title>
+    <style>
+        img {
+	max-width: 640px;
+	transition: 1s filter;
+	filter: sepia() saturate(4) hue-rotate(295deg);
+
+    /* sepia 降低饱和度
+    saturate 提升饱和度
+    hue-rotate 色相偏移 */
+}
+
+img:hover,
+img:focus {
+	filter: none;
+}
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <img src="http://csssecrets.io/images/tiger.jpg" />
+</body>
+</html>
